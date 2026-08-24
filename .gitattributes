@@ -1,7 +1,9 @@
-* text eol=lf
+# Auto-detect text files and normalize them to LF in the repository
+* text=auto eol=lf
 *.bat text eol=crlf
 *.patch text eol=lf
 *.java text eol=lf
+*.cfg text eol=lf
 *.png binary
 *.gif binary
 *.exe binary
@@ -10,5 +12,4 @@
 *.lzma binary
 *.zip binary
 *.pyd binary
-*.cfg text eol=lf
 *.jks binary

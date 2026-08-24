@@ -1,6 +1,6 @@
-### 1.21.10
+### 26.1
 - 5.0.0
-  Full blown rewrite, a rename and a lot of grey hairs later... (Plus some new content)
+  Full-blown rewrite, a rename and a lot of gray hairs later...
 
 ### 1.17.1
 - 3.0.2:  

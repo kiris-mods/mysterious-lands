@@ -1,0 +1,51 @@
+[versions]
+minecraft = "26.1.2"
+java = "25"
+
+# https://projects.neoforged.net/neoforged/moddevgradle
+moddevgradle = "2.0.144"
+# https://projects.neoforged.net/neoforged/neoform
+neoform = "26.1.2-1"
+
+# NeoForge
+# https://projects.neoforged.net/neoforged/neoforge
+neoforge = "26.1.2.97"
+
+# Fabric
+# https://fabricmc.net/develop
+fabric_loom = "1.17.19" # https://maven.fabricmc.net/net/fabricmc/fabric-loom/net.fabricmc.fabric-loom.gradle.plugin/
+fabric_loader = "0.19.3"
+fabric_api = "0.155.2+26.1.2"
+
+# Mods
+# https://maven.blamejared.com/mezz/jei/jei-26.1.2-common/
+jei = "29.29.0.77"
+# https://modrinth.com/mod/modmenu/versions
+modmenu = "18.0.0"
+# https://modrinth.com/mod/resourceful-config/versions
+resourcefulconfig = "4.0.1"
+
+[libraries]
+# Fabric
+fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }
+fabric_api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric_api" }
+
+# Minecraft Dependencies
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+
+# Mods
+jei_api = { module = "mezz.jei:jei-26.1.2-common-api", version.ref = "jei" }
+jei_fabric = { module = "mezz.jei:jei-26.1.2-fabric", version.ref = "jei" }
+jei_fabric_api = { module = "mezz.jei:jei-26.1.2-fabric-api", version.ref = "jei" }
+jei_neoforge = { module = "mezz.jei:jei-26.1.2-neoforge", version.ref = "jei" }
+jei_neoforge_api = { module = "mezz.jei:jei-26.1.2-neoforge-api", version.ref = "jei" }
+
+modmenu_fabric = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
+
+resourcefulconfig = { module = "com.teamresourceful.resourcefulconfig:resourcefulconfig-common-26.1", version.ref = "resourcefulconfig" }
+resourcefulconfig_fabric = { module = "com.teamresourceful.resourcefulconfig:resourcefulconfig-fabric-26.1", version.ref = "resourcefulconfig" }
+resourcefulconfig_neoforge = { module = "com.teamresourceful.resourcefulconfig:resourcefulconfig-neoforge-26.1", version.ref = "resourcefulconfig" }
+
+[plugins]
+moddevgradle = { id = "net.neoforged.moddev", version.ref = "moddevgradle" }
+fabric_loom = { id = "net.fabricmc.fabric-loom", version.ref = "fabric_loom" }
