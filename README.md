@@ -12,6 +12,14 @@
     <img src="https://img.shields.io/badge/CurseForge-16181C?style=for-the-badge&logo=curseforge&logoColor=FF784D" alt="CurseForge Badge.">
 </a>
 
+<a href="https://bsky.app/profile/tophatcat.dev">
+    <img src="https://img.shields.io/badge/Bluesky-16181C?style=for-the-badge&logo=bluesky&logoColor=1185FE" alt="Latest commit.">
+</a>
+
+<a href="https://github.com/kiris-mods/mysterious-lands/">
+    <img src="https://img.shields.io/badge/GitHub-16181C?style=for-the-badge&logo=github&logoColor=BBDDE5" alt="Github">
+</a>
+
 <a href="https://tophatcat.dev/mods/minecraft/mysterious-lands">
     <img src="https://img.shields.io/badge/tophatcat.dev-16181C?style=for-the-badge&logo=&logoColor=57Z29S" alt="Website link."/>
 </a>

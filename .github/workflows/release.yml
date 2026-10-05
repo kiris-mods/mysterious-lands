@@ -172,7 +172,7 @@ jobs:
           curseforge-project-id: ${{ needs.publish_platforms.outputs.curseforge_id }}
           modrinth-project-id: ${{ needs.publish_platforms.outputs.modrinth_id }}
           ping-notification-role: false
-          curseforge-emoji: "<:curseforge:1136460201608871986>"
+          curseforge-emoji: "<:curseforge:1458216711278039133>"
           modrinth-emoji: "<:modrinth:1136460057471635516>"
           sourcecode-emoji: "<:github:1458216644580217166>"
           thumbnail-url: https://raw.githubusercontent.com/kiris-mods/mysterious-lands/refs/heads/dev/common/src/main/resources/icon.png
