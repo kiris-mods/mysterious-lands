@@ -54,6 +54,8 @@ dependencies {
     implementation(libs.resourcefulconfig.fabric) {
         isTransitive = false
     }
+
+    implementation(libs.sparkweave.fabric)
 }
 
 loom {
@@ -66,13 +68,21 @@ loom {
 
     runs {
         fabricApi.configureDataGeneration {
+            outputDirectory = file("src/main/generated")
+            addToResources = false
+
             client = true
-            modId = modID
+            // must be sparkweave so it generates for the library.
+            // actual mod is set below via sparkweave.datagen.mods property
+            modId = "sparkweave"
             strictValidation = true // neoforge '--all' sets '--validate' to true as well
         }
 
         named("datagen") {
             displayName = "Fabric Data"
+            systemProperties.put("sparkweave.datagen.mods", modID)
         }
     }
 }
+
+sourceSets["main"].resources { srcDir("src/main/generated") }

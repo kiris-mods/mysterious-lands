@@ -27,7 +27,7 @@ repositories {
     maven("https://maven.teamresourceful.com/repository/maven-releases") {
         name = "TeamResourceful"
     }
-    maven("https://maven.tophatcat.dev") {
+    maven("https://maven.tophatcat.dev/releases") {
         name = "TopHatCat's Maven"
     }
 }
@@ -37,6 +37,10 @@ dependencies {
     "localRuntime"(libs.jei.neoforge)
 
     implementation(libs.resourcefulconfig.neoforge)
+
+    implementation(libs.sparkweave.neoforge)
+    accessTransformers(libs.sparkweave)
+    interfaceInjectionData(libs.sparkweave)
 }
 
 neoForge {
@@ -51,8 +55,12 @@ neoForge {
             clientData()
             gameDirectory = file("run/data")
 
+            systemProperty("sparkweave.datagen.mods", modID)
+
             programArguments.addAll(
-                "--mod", modID,
+                // must be sparkweave so it generates for the library.
+                // actual mod is set below via sparkweave.datagen.mods property
+                "--mod", "sparkweave",
                 "--all",
                 "--flat",
                 "--output", file("src/main/generated").absolutePath,

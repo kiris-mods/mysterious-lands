@@ -2,43 +2,38 @@
   "schemaVersion": 1,
   "id": "${mod_id}",
   "version": "${version}",
-  "name": "${mod_name}",
-  "description": "${description}",
+  "name": "${mod_display_name}",
+  "description": "${mod_description}",
   "authors": [
-    "${author}"
+    {
+      "name": "KiriCattus",
+      "contact": {
+        "homepage": "https://tophatcat.dev",
+        "github": "https://github.com/KiriCattus",
+        "bsky": "https://bsky.app/profile/tophatcat.dev",
+        "curseforge": "https://www.curseforge.com/members/KiriCattus",
+        "modrinth": "https://modrinth.com/user/KiriCattus"
+      }
+    }
   ],
   "contact": {
-    "homepage": "${display_url}",
-    "sources": "${mod_source}",
-    "issues": "${mod_source}/issues"
+    "homepage": "${homepage_url}",
+    "sources": "${sources_url}",
+    "issues": "${issues_url}"
   },
-  "license": "${license}",
-  "icon": "logo.png",
-  "environment": "*",
+  "license": "LGPL-2.1",
+  "icon": "icon.png",
   "entrypoints": {
     "main": [
-      "dev.tophatcat.mysteriousbiomes.MysteriousFabric"
+      "dev.tophatcat.mysteriouslands.MysteriousFabric"
     ],
     "client": [
-      "dev.tophatcat.mysteriousbiomes.client.MysteriousRenderingFabric"
     ]
-  },
-  "depends": {
-    "fabricloader": "${fabric_loader_version_range}",
-    "fabric": "*",
-    "minecraft": "${minecraft_version}",
-    "smartbrainlib": ">=${smart_brain_lib_fabric_version}",
-    "geckolib": ">=${geckolib_fabric_version}",
-    "resourcefulconfig": ">=${resourceful_config_fabric_version}",
-    "terrablender": ">=${terrablender_fabric_version}",
-    "java": ">=${java_version}"
   },
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.discord": "${discord}",
-        "modmenu.modrinth": "${modrinth_url}",
-        "modmenu.curseforge": "${curseforge_url}"
+        "modmenu.discord": "${discord_url}"
       },
       "update_checker": true
     },
@@ -49,13 +44,20 @@
         "fabric"
       ],
       "dependencies": [
-        "cattuslib(required){modrinth:M6agkTxA}{curseforge:280547}",
-        "fabric-api(required){modrinth:P7dR8mSH}{curseforge:306612}",
-        "smartbrainlib(required){modrinth:PuyPazRT}{curseforge:661293}",
-        "geckolib(required){modrinth:8BmcQJ2H}{curseforge:388172}",
-        "resourcefulconfig(required){modrinth:M1953qlQ}{curseforge:714059}",
-        "terrablender(required){modrinth:kkmrDlKT}{curseforge:565956}"
+        "fabric-api(required){curseforge:306612}{modrinth:P7dR8mSH}",
+        "sparkweave(required){curseforge:911456}{modrinth:nf68xfAw}",
+        "resourcefulconfig(required){curseforge:714059}{modrinth:M1953qlQ}"
       ]
     }
-  }
+  },
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "java": ">=${java_version}",
+    "minecraft": "=${minecraft_version}",
+    "fabric-api": ">=${fabric_api_version}",
+    "sparkweave": "*",
+    "resourcefulconfig": "*"
+  },
+  "environment": "*",
+  "accessWidener": "mysteriouslands.accesswidener"
 }

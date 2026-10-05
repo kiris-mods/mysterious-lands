@@ -1,68 +1,36 @@
-modLoader = "javafml" #mandatory
-loaderVersion = "[1,)" #mandatory
-license = "${license_url}" # Review your options at https://choosealicense.com/.
-issueTrackerURL = "${mod_source}/issues" #optional
+modLoader = "javafml"
+loaderVersion = "*"
+license = "LGPL-2.1"
+issueTrackerURL = "${issues_url}"
+sourcesUrl = "${sources_url}"
 
-[[mods]] #mandatory
-modId = "${mod_id}" #mandatory
-version = "${version}" #mandatory
-displayName = "${mod_name}" #mandatory
-displayURL = "${display_url}" #optional (displayed in the mod UI)
-logoFile = "logo.png" #optional
-credits = "${credits}" #optional
-authors = "${author}" #optional
-description = '''${description}''' #mandatory (Supports multiline text)
+[[mods]]
+modId = "${mod_id}"
+version = "${version}"
+displayName = "${mod_display_name}"
+displayURL = "${homepage_url}"
+iconFile = "icon.png"
+#credits = "" #Optional
+authors = "KiriCattus"
+description = '''${mod_description}'''
 
-[[dependencies.${mod_id}]] #optional
-modId = "neoforge" #mandatory
-type = "required"
-versionRange = "${neoforge_version_range}" #mandatory
-ordering = "NONE" # The order that this dependency should load in relation to your mod, required to be either 'BEFORE' or 'AFTER' if the dependency is not mandatory
-side = "BOTH" # Side this dependency is applied on - 'BOTH', 'CLIENT' or 'SERVER'
+[dependencies]
+"${mod_id}" = [
+  { modId = "neoforge", type = "required", versionRange = "*", ordering = "NONE", side = "BOTH" },
+  { modId = "minecraft", type = "required", versionRange = "[${minecraft_version}]", ordering = "NONE", side = "BOTH" },
+  { modId = "sparkweave", type = "required", mc-publish = { curseforge = "911456", modrinth = "nf68xfAw" } },
+  { modId = "${mod_id}", type = "required", versionRange = "[${version}]", ordering = "NONE", side = "BOTH" },
+  { modId = "resourcefulconfig", mc-publish = { curseforge = "714059", modrinth = "M1953qlQ" } },
+]
 
-[[dependencies.${mod_id}]]
-modId = "minecraft"
-type = "required"
-versionRange = "${minecraft_version_range}"
-ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.${mod_id}]]
-modId = "smartbrainlib"
-required = true
-versionRange = "[${smart_brain_lib_neoforge_version},)"
-ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.${mod_id}]]
-modId = "geckolib"
-required = true
-versionRange = "[${geckolib_neoforge_version},)"
-ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.${mod_id}]]
-modId = "resourcefulconfig"
-required = true
-versionRange = "[${resourceful_config_neoforge_version},)"
-ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.${mod_id}]]
-modId = "terrablender"
-type = "required"
-versionRange = "[${terrablender_neoforge_version},)"
-ordering = "NONE"
-side = "BOTH"
+# Features are specific properties of the game environment, that you may want to declare you require. This example declares
+# that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
+# stop your mod loading on the server for example.
+[features.${mod_id}]
+#openGLVersion="[3.2,)"
+javaVersion = "[${java_version},)"
 
 [mc-publish]
 curseforge = "curseforge_id"
 modrinth = "modrinth_id"
 loaders = ["neoforge"]
-
-# Features are specific properties of the game environment, that you may want to declare you require. This example declares
-# that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
-# stop your mod loading on the server for example.
-#[features.${mod_id}]
-#openGLVersion="[3.2,)"
-

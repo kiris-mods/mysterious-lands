@@ -22,7 +22,7 @@ repositories {
     maven("https://maven.teamresourceful.com/repository/maven-releases") {
         name = "TeamResourceful"
     }
-    maven("https://maven.tophatcat.dev") {
+    maven("https://maven.tophatcat.dev/releases") {
         name = "TopHatCat's Maven"
     }
 }
@@ -31,6 +31,10 @@ dependencies {
     compileOnly(libs.jei.api)
 
     compileOnly(libs.resourcefulconfig)
+
+    compileOnly(libs.sparkweave)
+    accessTransformers(libs.sparkweave)
+    interfaceInjectionData(libs.sparkweave)
 }
 
 neoForge {

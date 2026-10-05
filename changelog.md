@@ -1,5 +1,5 @@
-### 26.1
-- 5.0.0
+### 26.1.2
+- 5.0.0  
   Full-blown rewrite, a rename and a lot of gray hairs later...
 
 ### 1.17.1
