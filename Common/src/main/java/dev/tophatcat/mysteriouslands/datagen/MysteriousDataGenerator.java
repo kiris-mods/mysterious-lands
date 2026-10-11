@@ -15,7 +15,6 @@ public class MysteriousDataGenerator implements DataGenerationEntryPoint {
     public void generate(DataGenerationContext context) {
         var pack = context.getDefaultPack();
 
-        System.out.println("TESTING!!!!!!");
         pack.addProvider(MysteriousTagProvider.MysteriousBlockTags::new);
         pack.addProvider(MysteriousTagProvider.MysteriousItemTags::new);
         pack.addRecipes(MysteriousRecipeProvider::new);

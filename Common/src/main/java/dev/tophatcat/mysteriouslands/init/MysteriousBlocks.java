@@ -1,6 +1,5 @@
 package dev.tophatcat.mysteriouslands.init;
 
-import dev.tophatcat.mysteriouslands.data.MysteriousBlockFamilies;
 import dev.tophatcat.mysteriouslands.MysteriousLands;
 import dev.upcraft.sparkweave.api.block.SparkweaveCeilingHangingSignBlock;
 import dev.upcraft.sparkweave.api.block.SparkweaveStandingSignBlock;
@@ -9,304 +8,338 @@ import dev.upcraft.sparkweave.api.registry.RegistryHandler;
 import dev.upcraft.sparkweave.api.registry.RegistrySupplier;
 import dev.upcraft.sparkweave.api.registry.block.BlockRegistryHandler;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
+import net.minecraft.world.level.block.UntintedParticleLeavesBlock;
+import net.minecraft.world.level.block.WallHangingSignBlock;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.PushReaction;
 
-import java.util.function.Supplier;
-
 public class MysteriousBlocks {
 
     public static final BlockRegistryHandler BLOCKS = RegistryHandler.blocks(MysteriousLands.MODID);
 
     // Logs
-    public static final RegistrySupplier<RotatedPillarBlock> BLOOD_SOAKED_LOG
-        = createPillarBlock("blood_soaked_log");
-    public static final RegistrySupplier<RotatedPillarBlock> GHOSTLY_LOG
-        = createPillarBlock("ghostly_log");
+    public static final RegistrySupplier<RotatedPillarBlock> BLOOD_SOAKED_LOG = BLOCKS.register(
+        "blood_soaked_log", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
+    public static final RegistrySupplier<RotatedPillarBlock> GHOSTLY_LOG = BLOCKS.register(
+        "ghostly_log", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> SEEPING_LOG
-        = createPillarBlock("seeping_log");
+        = BLOCKS.register("seeping_log", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> SORBUS_LOG
-        = createPillarBlock("sorbus_log");
+        = BLOCKS.register("sorbus_log", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> WALNUT_LOG
-        = createPillarBlock("walnut_log");
+        = BLOCKS.register("walnut_log", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
 
     // Stripped logs
     public static final RegistrySupplier<RotatedPillarBlock> BLOOD_SOAKED_STRIPPED_LOG
-        = createPillarBlock("blood_soaked_stripped_log");
+        = BLOCKS.register("blood_soaked_stripped_log", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> GHOSTLY_STRIPPED_LOG
-        = createPillarBlock("ghostly_stripped_log");
+        = BLOCKS.register("ghostly_stripped_log", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> SEEPING_STRIPPED_LOG
-        = createPillarBlock("seeping_stripped_log");
+        = BLOCKS.register("seeping_stripped_log", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> SORBUS_STRIPPED_LOG
-        = createPillarBlock("sorbus_stripped_log");
+        = BLOCKS.register("sorbus_stripped_log", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> WALNUT_STRIPPED_LOG
-        = createPillarBlock("walnut_stripped_log");
+        = BLOCKS.register("walnut_stripped_log", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
 
     // Woods
     public static final RegistrySupplier<RotatedPillarBlock> BLOOD_SOAKED_WOOD
-        = createPillarBlock("blood_soaked_wood");
+        = BLOCKS.register("blood_soaked_wood", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> GHOSTLY_WOOD
-        = createPillarBlock("ghostly_wood");
+        = BLOCKS.register("ghostly_wood", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> SEEPING_WOOD
-        = createPillarBlock("seeping_wood");
+        = BLOCKS.register("seeping_wood", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> SORBUS_WOOD
-        = createPillarBlock("sorbus_wood");
+        = BLOCKS.register("sorbus_wood", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> WALNUT_WOOD
-        = createPillarBlock("walnut_wood");
+        = BLOCKS.register("walnut_wood", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
 
     // Stripped woods
     public static final RegistrySupplier<RotatedPillarBlock> BLOOD_SOAKED_STRIPPED_WOOD
-        = createPillarBlock("blood_soaked_stripped_wood");
+        = BLOCKS.register("blood_soaked_stripped_wood", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> GHOSTLY_STRIPPED_WOOD
-        = createPillarBlock("ghostly_stripped_wood");
+        = BLOCKS.register("ghostly_stripped_wood", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> SEEPING_STRIPPED_WOOD
-        = createPillarBlock("seeping_stripped_wood");
+        = BLOCKS.register("seeping_stripped_wood", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> SORBUS_STRIPPED_WOOD
-        = createPillarBlock("sorbus_stripped_wood");
+        = BLOCKS.register("sorbus_stripped_wood", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
     public static final RegistrySupplier<RotatedPillarBlock> WALNUT_STRIPPED_WOOD
-        = createPillarBlock("walnut_stripped_wood");
+        = BLOCKS.register("walnut_stripped_wood", RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
 
     // Planks
-    public static final RegistrySupplier<Block> BLOOD_SOAKED_PLANKS = createPlanksBlock("blood_soaked_planks");
-    public static final RegistrySupplier<Block> GHOSTLY_PLANKS = createPlanksBlock("ghostly_planks");
-    public static final RegistrySupplier<Block> SEEPING_PLANKS = createPlanksBlock("seeping_planks");
-    public static final RegistrySupplier<Block> SORBUS_PLANKS = createPlanksBlock("sorbus_planks");
-    public static final RegistrySupplier<Block> WALNUT_PLANKS = createPlanksBlock("walnut_planks");
+    public static final RegistrySupplier<Block> BLOOD_SOAKED_PLANKS = BLOCKS.register("blood_soaked_planks",
+        Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
+    public static final RegistrySupplier<Block> GHOSTLY_PLANKS = BLOCKS.register("ghostly_planks",
+        Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
+    public static final RegistrySupplier<Block> SEEPING_PLANKS = BLOCKS.register("seeping_planks",
+        Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
+    public static final RegistrySupplier<Block> SORBUS_PLANKS = BLOCKS.register("sorbus_planks",
+        Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
+    public static final RegistrySupplier<Block> WALNUT_PLANKS = BLOCKS.register("walnut_planks",
+        Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
 
     // Stairs
-    public static final RegistrySupplier<StairBlock> BLOOD_SOAKED_STAIRS = createStairsBlock(
-        "blood_soaked_stairs", BLOOD_SOAKED_PLANKS);
-    public static final RegistrySupplier<StairBlock> GHOSTLY_STAIRS = createStairsBlock(
-        "ghostly_stairs", GHOSTLY_PLANKS);
-    public static final RegistrySupplier<StairBlock> SEEPING_STAIRS = createStairsBlock(
-        "seeping_stairs", SEEPING_PLANKS);
-    public static final RegistrySupplier<StairBlock> SORBUS_STAIRS = createStairsBlock(
-        "sorbus_stairs", SORBUS_PLANKS);
-    public static final RegistrySupplier<StairBlock> WALNUT_STAIRS = createStairsBlock(
-        "walnut_stairs", WALNUT_PLANKS);
+    public static final RegistrySupplier<StairBlock> BLOOD_SOAKED_STAIRS = BLOCKS.register(
+        "blood_soaked_stairs", properties -> new StairBlock(BLOOD_SOAKED_PLANKS.get().defaultBlockState(), properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS));
+    public static final RegistrySupplier<StairBlock> GHOSTLY_STAIRS = BLOCKS.register(
+        "ghostly_stairs", properties -> new StairBlock(GHOSTLY_PLANKS.get().defaultBlockState(), properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS));
+    public static final RegistrySupplier<StairBlock> SEEPING_STAIRS = BLOCKS.register(
+        "seeping_stairs", properties -> new StairBlock(SEEPING_PLANKS.get().defaultBlockState(), properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS));
+    public static final RegistrySupplier<StairBlock> SORBUS_STAIRS = BLOCKS.register(
+        "sorbus_stairs", properties -> new StairBlock(SORBUS_PLANKS.get().defaultBlockState(), properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS));
+    public static final RegistrySupplier<StairBlock> WALNUT_STAIRS = BLOCKS.register(
+        "walnut_stairs", properties -> new StairBlock(WALNUT_PLANKS.get().defaultBlockState(), properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS));
 
     // Leaves
-    public static final RegistrySupplier<Block> BLOOD_SOAKED_LEAVES = createLeavesBlock("blood_soaked_leaves");
-    public static final RegistrySupplier<Block> GHOSTLY_LEAVES = createLeavesBlock("ghostly_leaves");
-    public static final RegistrySupplier<Block> SEEPING_LEAVES = createLeavesBlock("seeping_leaves");
-    public static final RegistrySupplier<Block> SORBUS_LEAVES = createLeavesBlock("sorbus_leaves");
-    public static final RegistrySupplier<Block> WALNUT_LEAVES = createLeavesBlock("walnut_leaves");
+    public static final RegistrySupplier<Block> BLOOD_SOAKED_LEAVES = BLOCKS.register("blood_soaked_leaves",
+        properties -> new UntintedParticleLeavesBlock(
+        0.5F, ParticleTypes.ASH, properties), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES));
+    public static final RegistrySupplier<Block> GHOSTLY_LEAVES = BLOCKS.register("ghostly_leaves",
+        properties -> new UntintedParticleLeavesBlock(
+        0.5F, ParticleTypes.ASH, properties), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES));
+    public static final RegistrySupplier<Block> SEEPING_LEAVES = BLOCKS.register("seeping_leaves",
+        properties -> new UntintedParticleLeavesBlock(
+        0.5F, ParticleTypes.ASH, properties), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES));
+    public static final RegistrySupplier<Block> SORBUS_LEAVES = BLOCKS.register("sorbus_leaves",
+        properties -> new UntintedParticleLeavesBlock(
+        0.5F, ParticleTypes.ASH, properties), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES));
+    public static final RegistrySupplier<Block> WALNUT_LEAVES = BLOCKS.register("walnut_leaves",
+        properties -> new UntintedParticleLeavesBlock(
+        0.5F, ParticleTypes.ASH, properties), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES));
 
     // Slabs
-    public static final RegistrySupplier<SlabBlock> BLOOD_SOAKED_SLAB = createSlabBlock("blood_soaked_slab");
-    public static final RegistrySupplier<SlabBlock> GHOSTLY_SLAB = createSlabBlock("ghostly_slab");
-    public static final RegistrySupplier<SlabBlock> SEEPING_SLAB = createSlabBlock("seeping_slab");
-    public static final RegistrySupplier<SlabBlock> SORBUS_SLAB = createSlabBlock("sorbus_slab");
-    public static final RegistrySupplier<SlabBlock> WALNUT_SLAB = createSlabBlock("walnut_slab");
+    public static final RegistrySupplier<SlabBlock> BLOOD_SOAKED_SLAB = BLOCKS.register("blood_soaked_slab",
+        SlabBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB));
+    public static final RegistrySupplier<SlabBlock> GHOSTLY_SLAB = BLOCKS.register("ghostly_slab",
+        SlabBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB));
+    public static final RegistrySupplier<SlabBlock> SEEPING_SLAB = BLOCKS.register("seeping_slab",
+        SlabBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB));
+    public static final RegistrySupplier<SlabBlock> SORBUS_SLAB = BLOCKS.register("sorbus_slab",
+        SlabBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB));
+    public static final RegistrySupplier<SlabBlock> WALNUT_SLAB = BLOCKS.register("walnut_slab",
+        SlabBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB));
 
     // Fences
-    public static final RegistrySupplier<FenceBlock> BLOOD_SOAKED_FENCE = createFenceBlock("blood_soaked_fence");
-    public static final RegistrySupplier<FenceBlock> GHOSTLY_FENCE = createFenceBlock("ghostly_fence");
-    public static final RegistrySupplier<FenceBlock> SEEPING_FENCE = createFenceBlock("seeping_fence");
-    public static final RegistrySupplier<FenceBlock> SORBUS_FENCE = createFenceBlock("sorbus_fence");
-    public static final RegistrySupplier<FenceBlock> WALNUT_FENCE = createFenceBlock("walnut_fence");
+    public static final RegistrySupplier<FenceBlock> BLOOD_SOAKED_FENCE = BLOCKS.register("blood_soaked_fence",
+        FenceBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE));
+    public static final RegistrySupplier<FenceBlock> GHOSTLY_FENCE = BLOCKS.register("ghostly_fence",
+        FenceBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE));
+    public static final RegistrySupplier<FenceBlock> SEEPING_FENCE = BLOCKS.register("seeping_fence",
+        FenceBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE));
+    public static final RegistrySupplier<FenceBlock> SORBUS_FENCE = BLOCKS.register("sorbus_fence",
+        FenceBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE));
+    public static final RegistrySupplier<FenceBlock> WALNUT_FENCE = BLOCKS.register("walnut_fence",
+        FenceBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE));
 
     // Gates
-    public static final RegistrySupplier<FenceGateBlock> BLOOD_SOAKED_GATE = createGateBlock("blood_soaked_gate");
-    public static final RegistrySupplier<FenceGateBlock> GHOSTLY_GATE = createGateBlock("ghostly_gate");
-    public static final RegistrySupplier<FenceGateBlock> SEEPING_GATE = createGateBlock("seeping_gate");
-    public static final RegistrySupplier<FenceGateBlock> SORBUS_GATE = createGateBlock("sorbus_gate");
-    public static final RegistrySupplier<FenceGateBlock> WALNUT_GATE = createGateBlock("walnut_gate");
+    public static final RegistrySupplier<FenceGateBlock> BLOOD_SOAKED_GATE = BLOCKS.register("blood_soaked_gate",
+        properties -> new FenceGateBlock(WoodType.OAK, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE));
+    public static final RegistrySupplier<FenceGateBlock> GHOSTLY_GATE = BLOCKS.register("ghostly_gate",
+        properties -> new FenceGateBlock(WoodType.OAK, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE));
+    public static final RegistrySupplier<FenceGateBlock> SEEPING_GATE = BLOCKS.register("seeping_gate",
+        properties -> new FenceGateBlock(WoodType.OAK, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE));
+    public static final RegistrySupplier<FenceGateBlock> SORBUS_GATE = BLOCKS.register("sorbus_gate",
+        properties -> new FenceGateBlock(WoodType.OAK, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE));
+    public static final RegistrySupplier<FenceGateBlock> WALNUT_GATE = BLOCKS.register("walnut_gate",
+        properties -> new FenceGateBlock(WoodType.OAK, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE));
 
     // Buttons
-    public static final RegistrySupplier<ButtonBlock> BLOOD_SOAKED_BUTTON = createButtonBlock("blood_soaked_button");
-    public static final RegistrySupplier<ButtonBlock> GHOSTLY_BUTTON = createButtonBlock("ghostly_button");
-    public static final RegistrySupplier<ButtonBlock> SEEPING_BUTTON = createButtonBlock("seeping_button");
-    public static final RegistrySupplier<ButtonBlock> SORBUS_BUTTON = createButtonBlock("sorbus_button");
-    public static final RegistrySupplier<ButtonBlock> WALNUT_BUTTON = createButtonBlock("walnut_button");
+    public static final RegistrySupplier<ButtonBlock> BLOOD_SOAKED_BUTTON = BLOCKS.register("blood_soaked_button",
+        properties -> new ButtonBlock(BlockSetType.OAK, 30, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON));
+    public static final RegistrySupplier<ButtonBlock> GHOSTLY_BUTTON = BLOCKS.register("ghostly_button",
+        properties -> new ButtonBlock(BlockSetType.OAK, 30, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON));
+    public static final RegistrySupplier<ButtonBlock> SEEPING_BUTTON = BLOCKS.register("seeping_button",
+        properties -> new ButtonBlock(BlockSetType.OAK, 30, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON));
+    public static final RegistrySupplier<ButtonBlock> SORBUS_BUTTON = BLOCKS.register("sorbus_button",
+        properties -> new ButtonBlock(BlockSetType.OAK, 30, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON));
+    public static final RegistrySupplier<ButtonBlock> WALNUT_BUTTON = BLOCKS.register("walnut_button",
+        properties -> new ButtonBlock(BlockSetType.OAK, 30, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON));
 
     // Pressure plates
     public static final RegistrySupplier<PressurePlateBlock> BLOOD_SOAKED_PRESSURE_PLATE
-        = createPressurePlateBlock("blood_soaked_pressure_plate");
+        = BLOCKS.register("blood_soaked_pressure_plate", properties -> new PressurePlateBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE));
     public static final RegistrySupplier<PressurePlateBlock> GHOSTLY_PRESSURE_PLATE
-        = createPressurePlateBlock("ghostly_pressure_plate");
+        = BLOCKS.register("ghostly_pressure_plate", properties -> new PressurePlateBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE));
     public static final RegistrySupplier<PressurePlateBlock> SEEPING_PRESSURE_PLATE
-        = createPressurePlateBlock("seeping_pressure_plate");
+        = BLOCKS.register("seeping_pressure_plate", properties -> new PressurePlateBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE));
     public static final RegistrySupplier<PressurePlateBlock> SORBUS_PRESSURE_PLATE
-        = createPressurePlateBlock("sorbus_pressure_plate");
+        = BLOCKS.register("sorbus_pressure_plate", properties -> new PressurePlateBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE));
     public static final RegistrySupplier<PressurePlateBlock> WALNUT_PRESSURE_PLATE
-        = createPressurePlateBlock("walnut_pressure_plate");
+        = BLOCKS.register("walnut_pressure_plate", properties -> new PressurePlateBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE));
 
     // Trapdoors
     public static final RegistrySupplier<TrapDoorBlock> BLOOD_SOAKED_TRAPDOOR
-        = createTrapdoorBlock("blood_soaked_trapdoor");
+        = BLOCKS.register("blood_soaked_trapdoor", properties -> new TrapDoorBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR));
     public static final RegistrySupplier<TrapDoorBlock> GHOSTLY_TRAPDOOR
-        = createTrapdoorBlock("ghostly_trapdoor");
+        = BLOCKS.register("ghostly_trapdoor", properties -> new TrapDoorBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR));
     public static final RegistrySupplier<TrapDoorBlock> SEEPING_TRAPDOOR
-        = createTrapdoorBlock("seeping_trapdoor");
+        = BLOCKS.register("seeping_trapdoor", properties -> new TrapDoorBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR));
     public static final RegistrySupplier<TrapDoorBlock> SORBUS_TRAPDOOR
-        = createTrapdoorBlock("sorbus_trapdoor");
+        = BLOCKS.register("sorbus_trapdoor", properties -> new TrapDoorBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR));
     public static final RegistrySupplier<TrapDoorBlock> WALNUT_TRAPDOOR
-        = createTrapdoorBlock("walnut_trapdoor");
+        = BLOCKS.register("walnut_trapdoor", properties -> new TrapDoorBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR));
 
     // Doors
-    public static final RegistrySupplier<DoorBlock> BLOOD_SOAKED_DOOR = createDoorBlock("blood_soaked_door");
-    public static final RegistrySupplier<DoorBlock> GHOSTLY_DOOR = createDoorBlock("ghostly_door");
-    public static final RegistrySupplier<DoorBlock> SEEPING_DOOR = createDoorBlock("seeping_door");
-    public static final RegistrySupplier<DoorBlock> SORBUS_DOOR = createDoorBlock("sorbus_door");
-    public static final RegistrySupplier<DoorBlock> WALNUT_DOOR = createDoorBlock("walnut_door");
+    public static final RegistrySupplier<DoorBlock> BLOOD_SOAKED_DOOR = BLOCKS.register("blood_soaked_door",
+        properties -> new DoorBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).strength(3.0F).noOcclusion().ignitedByLava());
+    public static final RegistrySupplier<DoorBlock> GHOSTLY_DOOR = BLOCKS.register("ghostly_door",
+        properties -> new DoorBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).strength(3.0F).noOcclusion().ignitedByLava());
+    public static final RegistrySupplier<DoorBlock> SEEPING_DOOR = BLOCKS.register("seeping_door",
+        properties -> new DoorBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).strength(3.0F).noOcclusion().ignitedByLava());
+    public static final RegistrySupplier<DoorBlock> SORBUS_DOOR = BLOCKS.register("sorbus_door",
+        properties -> new DoorBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).strength(3.0F).noOcclusion().ignitedByLava());
+    public static final RegistrySupplier<DoorBlock> WALNUT_DOOR = BLOCKS.register("walnut_door",
+        properties -> new DoorBlock(BlockSetType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).strength(3.0F).noOcclusion().ignitedByLava());
 
     // Saplings
     // TODO Make our own tree growers and fancy trees.
     public static final RegistrySupplier<SaplingBlock> BLOOD_SOAKED_SAPLING
-        = createSaplingBlock("blood_soaked_sapling", TreeGrower.BIRCH);
+        = BLOCKS.register("blood_soaked_sapling", properties -> new SaplingBlock(TreeGrower.BIRCH, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<SaplingBlock> GHOSTLY_SAPLING
-        = createSaplingBlock("ghostly_sapling", TreeGrower.BIRCH);
+        = BLOCKS.register("ghostly_sapling", properties -> new SaplingBlock(TreeGrower.BIRCH, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<SaplingBlock> SEEPING_SAPLING
-        = createSaplingBlock("seeping_sapling", TreeGrower.BIRCH);
+        = BLOCKS.register("seeping_sapling", properties -> new SaplingBlock(TreeGrower.BIRCH, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<SaplingBlock> SORBUS_SAPLING
-        = createSaplingBlock("sorbus_sapling", TreeGrower.BIRCH);
+        = BLOCKS.register("sorbus_sapling", properties -> new SaplingBlock(TreeGrower.BIRCH, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<SaplingBlock> WALNUT_SAPLING
-        = createSaplingBlock("walnut_sapling", TreeGrower.BIRCH);
+        = BLOCKS.register("walnut_sapling", properties -> new SaplingBlock(TreeGrower.BIRCH, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
 
     public static final RegistrySupplier<Block> POTTED_BLOOD_SOAKED_SAPLING
-        = createPottedSapling("blood_soaked_potted_sapling", BLOOD_SOAKED_SAPLING);
+        = BLOCKS.register("blood_soaked_potted_sapling", properties -> new FlowerPotBlock(BLOOD_SOAKED_SAPLING.get(),
+            properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<Block> POTTED_GHOSTLY_SAPLING
-        = createPottedSapling("ghostly_potted_sapling", GHOSTLY_SAPLING);
+        = BLOCKS.register("ghostly_potted_sapling", properties -> new FlowerPotBlock(GHOSTLY_SAPLING.get(),
+            properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<Block> POTTED_SEEPING_SAPLING
-        = createPottedSapling("seeping_potted_sapling", SEEPING_SAPLING);
+        = BLOCKS.register("seeping_potted_sapling", properties -> new FlowerPotBlock(SEEPING_SAPLING.get(),
+            properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<Block> POTTED_SORBUS_SAPLING
-        = createPottedSapling("sorbus_potted_sapling", SORBUS_SAPLING);
+        = BLOCKS.register("sorbus_potted_sapling", properties -> new FlowerPotBlock(SORBUS_SAPLING.get(),
+            properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<Block> POTTED_WALNUT_SAPLING
-        = createPottedSapling("walnut_potted_sapling", WALNUT_SAPLING);
+        = BLOCKS.register("walnut_potted_sapling", properties -> new FlowerPotBlock(WALNUT_SAPLING.get(),
+            properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
 
     // Floor signs
     public static final RegistrySupplier<SparkweaveStandingSignBlock> BLOOD_SOAKED_SIGN
-        = createStandingSignBlock("blood_soaked_sign", WoodType.OAK);
+        = BLOCKS.register("blood_soaked_sign", properties -> new SparkweaveStandingSignBlock(WoodType.OAK, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN));
     public static final RegistrySupplier<SparkweaveStandingSignBlock> GHOSTLY_SIGN
-        = createStandingSignBlock("ghostly_sign", WoodType.OAK);
+        = BLOCKS.register("ghostly_sign", properties -> new SparkweaveStandingSignBlock(WoodType.OAK, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN));
     public static final RegistrySupplier<SparkweaveStandingSignBlock> SEEPING_SIGN
-        = createStandingSignBlock("seeping_sign", WoodType.OAK);
+        = BLOCKS.register("seeping_sign", properties -> new SparkweaveStandingSignBlock(WoodType.OAK, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN));
     public static final RegistrySupplier<SparkweaveStandingSignBlock> SORBUS_SIGN
-        = createStandingSignBlock("sorbus_sign", WoodType.OAK);
+        = BLOCKS.register("sorbus_sign", properties -> new SparkweaveStandingSignBlock(WoodType.OAK, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN));
     public static final RegistrySupplier<SparkweaveStandingSignBlock> WALNUT_SIGN
-        = createStandingSignBlock("walnut_sign", WoodType.OAK);
+        = BLOCKS.register("walnut_sign", properties -> new SparkweaveStandingSignBlock(WoodType.OAK, properties),
+        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN));
 
     // Wall signs
     public static final RegistrySupplier<SparkweaveWallSignBlock> BLOOD_SOAKED_WALL_SIGN
-        = createWallSignBlock("blood_soaked_wall_sign", WoodType.OAK);
+        = BLOCKS.register("blood_soaked_wall_sign", properties -> new SparkweaveWallSignBlock(WoodType.OAK, properties),
+        () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN).setOverridesFrom(BLOOD_SOAKED_SIGN));
     public static final RegistrySupplier<SparkweaveWallSignBlock> GHOSTLY_WALL_SIGN
-        = createWallSignBlock("ghostly_wall_sign", WoodType.OAK);
+        = BLOCKS.register("ghostly_wall_sign", properties -> new SparkweaveWallSignBlock(WoodType.OAK, properties),
+        () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN).setOverridesFrom(GHOSTLY_SIGN));
     public static final RegistrySupplier<SparkweaveWallSignBlock> SEEPING_WALL_SIGN
-        = createWallSignBlock("seeping_wall_sign", WoodType.OAK);
+        = BLOCKS.register("seeping_wall_sign", properties -> new SparkweaveWallSignBlock(WoodType.OAK, properties),
+        () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN).setOverridesFrom(SEEPING_SIGN));
     public static final RegistrySupplier<SparkweaveWallSignBlock> SORBUS_WALL_SIGN
-        = createWallSignBlock("sorbus_wall_sign", WoodType.OAK);
+        = BLOCKS.register("sorbus_wall_sign", properties -> new SparkweaveWallSignBlock(WoodType.OAK, properties),
+        () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN).setOverridesFrom(SORBUS_SIGN));
     public static final RegistrySupplier<SparkweaveWallSignBlock> WALNUT_WALL_SIGN
-        = createWallSignBlock("walnut_wall_sign", WoodType.OAK);
+        = BLOCKS.register("walnut_wall_sign", properties -> new SparkweaveWallSignBlock(WoodType.OAK, properties),
+        () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN).setOverridesFrom(WALNUT_SIGN));
 
     // Hanging signs
     public static final RegistrySupplier<SparkweaveCeilingHangingSignBlock> BLOOD_SOAKED_HANGING_SIGN
-        = createHangingSignBlock("blood_soaked_hanging_sign", WoodType.OAK);
+        = BLOCKS.register("blood_soaked_hanging_sign", properties -> new SparkweaveCeilingHangingSignBlock(WoodType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN));
     public static final RegistrySupplier<SparkweaveCeilingHangingSignBlock> GHOSTLY_HANGING_SIGN
-        = createHangingSignBlock("ghostly_hanging_sign", WoodType.OAK);
+        = BLOCKS.register("ghostly_hanging_sign", properties -> new SparkweaveCeilingHangingSignBlock(WoodType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN));
     public static final RegistrySupplier<SparkweaveCeilingHangingSignBlock> SEEPING_HANGING_SIGN
-        = createHangingSignBlock("seeping_hanging_sign", WoodType.OAK);
+        = BLOCKS.register("seeping_hanging_sign", properties -> new SparkweaveCeilingHangingSignBlock(WoodType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN));
     public static final RegistrySupplier<SparkweaveCeilingHangingSignBlock> SORBUS_HANGING_SIGN
-        = createHangingSignBlock("sorbus_hanging_sign", WoodType.OAK);
+        = BLOCKS.register("sorbus_hanging_sign", properties -> new SparkweaveCeilingHangingSignBlock(WoodType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN));
     public static final RegistrySupplier<SparkweaveCeilingHangingSignBlock> WALNUT_HANGING_SIGN
-        = createHangingSignBlock("walnut_hanging_sign", WoodType.OAK);
+        = BLOCKS.register("walnut_hanging_sign", properties -> new SparkweaveCeilingHangingSignBlock(WoodType.OAK, properties),
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN));
 
     // Wall hanging signs
     public static final RegistrySupplier<WallHangingSignBlock> BLOOD_SOAKED_WALL_HANGING_SIGN
-        = createWallHangingSignBlock("blood_soaked_wall_hanging_sign", WoodType.OAK);
+        = BLOCKS.register("blood_soaked_wall_hanging_sign", properties -> new WallHangingSignBlock(WoodType.OAK, properties),
+        () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).setOverridesFrom(BLOOD_SOAKED_HANGING_SIGN));
     public static final RegistrySupplier<WallHangingSignBlock> GHOSTLY_WALL_HANGING_SIGN
-        = createWallHangingSignBlock("ghostly_wall_hanging_sign", WoodType.OAK);
+        = BLOCKS.register("ghostly_wall_hanging_sign", properties -> new WallHangingSignBlock(WoodType.OAK, properties),
+        () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).setOverridesFrom(GHOSTLY_HANGING_SIGN));
     public static final RegistrySupplier<WallHangingSignBlock> SEEPING_WALL_HANGING_SIGN
-        = createWallHangingSignBlock("seeping_wall_hanging_sign", WoodType.OAK);
+        = BLOCKS.register("seeping_wall_hanging_sign", properties -> new WallHangingSignBlock(WoodType.OAK, properties),
+        () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).setOverridesFrom(SEEPING_HANGING_SIGN));
     public static final RegistrySupplier<WallHangingSignBlock> SORBUS_WALL_HANGING_SIGN
-        = createWallHangingSignBlock("sorbus_wall_hanging_sign", WoodType.OAK);
+        = BLOCKS.register("sorbus_wall_hanging_sign", properties -> new WallHangingSignBlock(WoodType.OAK, properties),
+        () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).setOverridesFrom(SORBUS_HANGING_SIGN));
     public static final RegistrySupplier<WallHangingSignBlock> WALNUT_WALL_HANGING_SIGN
-        = createWallHangingSignBlock("walnut_wall_hanging_sign", WoodType.OAK);
-
-    private static RegistrySupplier<RotatedPillarBlock> createPillarBlock(String name) {
-        return BLOCKS.register(name, RotatedPillarBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
-    }
-
-    private static RegistrySupplier<Block> createPlanksBlock(String name) {
-        return BLOCKS.register(name, Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
-    }
-
-    private static RegistrySupplier<StairBlock> createStairsBlock(String name, Supplier<Block> blockState) {
-        return BLOCKS.register(name, properties -> new StairBlock(blockState.get().defaultBlockState(), properties),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS));
-    }
-
-    private static RegistrySupplier<Block> createLeavesBlock(String name) {
-        return BLOCKS.register(name, properties -> new UntintedParticleLeavesBlock(
-            0.5F, ParticleTypes.ASH, properties), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES));
-    }
-
-    private static RegistrySupplier<SlabBlock> createSlabBlock(String name) {
-        return BLOCKS.register(name, SlabBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB));
-    }
-
-    private static RegistrySupplier<FenceBlock> createFenceBlock(String name) {
-        return BLOCKS.register(name, FenceBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE));
-    }
-
-    private static RegistrySupplier<FenceGateBlock> createGateBlock(String name) {
-        return BLOCKS.register(name, properties -> new FenceGateBlock(WoodType.OAK, properties),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE));
-    }
-
-    private static RegistrySupplier<ButtonBlock> createButtonBlock(String name) {
-        return BLOCKS.register(name, properties -> new ButtonBlock(BlockSetType.OAK, 30, properties),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON));
-    }
-
-    private static RegistrySupplier<PressurePlateBlock> createPressurePlateBlock(String name) {
-        return BLOCKS.register(name, properties -> new PressurePlateBlock(BlockSetType.OAK, properties),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE));
-    }
-
-    private static RegistrySupplier<TrapDoorBlock> createTrapdoorBlock(String name) {
-        return BLOCKS.register(name, properties -> new TrapDoorBlock(BlockSetType.OAK, properties),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR));
-    }
-
-    private static RegistrySupplier<DoorBlock> createDoorBlock(String name) {
-        return BLOCKS.register(name, properties -> new DoorBlock(BlockSetType.OAK, properties),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).strength(3.0F).noOcclusion().ignitedByLava());
-    }
-
-    private static RegistrySupplier<SaplingBlock> createSaplingBlock(String name, TreeGrower generator) {
-        return BLOCKS.register(name, properties -> new SaplingBlock(generator, properties),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
-    }
-
-    @SuppressWarnings("deprecation")
-    private static RegistrySupplier<Block> createPottedSapling(String name, RegistrySupplier<SaplingBlock> saplingBlock) {
-        return BLOCKS.register(name, properties -> new FlowerPotBlock(saplingBlock.get(),
-                properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
-    }
-
-    private static RegistrySupplier<SparkweaveStandingSignBlock> createStandingSignBlock(String name, WoodType signType) {
-        return BLOCKS.register(name, properties -> new SparkweaveStandingSignBlock(signType, properties),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN));
-    }
-
-    private static RegistrySupplier<SparkweaveWallSignBlock> createWallSignBlock(String name, WoodType signType) {
-        return BLOCKS.register(name, properties -> new SparkweaveWallSignBlock(signType, properties),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN));
-    }
-
-    private static RegistrySupplier<SparkweaveCeilingHangingSignBlock> createHangingSignBlock(String name, WoodType signType) {
-        return BLOCKS.register(name, properties -> new SparkweaveCeilingHangingSignBlock(signType, properties),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN));
-    }
-
-    private static RegistrySupplier<WallHangingSignBlock> createWallHangingSignBlock(String name, WoodType signType) {
-        return BLOCKS.register(name, properties -> new WallHangingSignBlock(signType, properties),
-            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN));
-    }
+        = BLOCKS.register("walnut_wall_hanging_sign", properties -> new WallHangingSignBlock(WoodType.OAK, properties),
+        () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).setOverridesFrom(WALNUT_HANGING_SIGN));
 }

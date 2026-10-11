@@ -9,7 +9,7 @@ neoform = "26.1.2-1"
 
 # NeoForge
 # https://projects.neoforged.net/neoforged/neoforge
-neoforge = "26.1.2.114"
+neoforge = "26.1.2.116"
 
 # Fabric
 # https://fabricmc.net/develop
@@ -25,7 +25,7 @@ modmenu = "18.0.0"
 # https://modrinth.com/mod/resourceful-config/versions
 resourcefulconfig = "4.0.1"
 # https://www.curseforge.com/minecraft/mc-mods/sparkweave/files/all
-sparkweave = "0.600.0-alpha.18"
+sparkweave = "0.600.0-alpha.19"
 
 [libraries]
 # Fabric
