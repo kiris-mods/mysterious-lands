@@ -2,6 +2,7 @@ package dev.tophatcat.mysteriouslands.datagen;
 
 import com.google.auto.service.AutoService;
 import dev.tophatcat.mysteriouslands.datagen.client.MysteriousEnglishLanguageProvider;
+import dev.tophatcat.mysteriouslands.datagen.client.MysteriousModelProvider;
 import dev.tophatcat.mysteriouslands.datagen.server.MysteriousRecipeProvider;
 import dev.tophatcat.mysteriouslands.datagen.server.MysteriousTagProvider;
 import dev.tophatcat.mysteriouslands.datagen.server.loot.MysteriousLootTableProvider;
@@ -20,5 +21,6 @@ public class MysteriousDataGenerator implements DataGenerationEntryPoint {
         pack.addRecipes(MysteriousRecipeProvider::new);
         pack.addProvider(MysteriousLootTableProvider::new);
         pack.addProvider(DataGenerationContext::includeClient, MysteriousEnglishLanguageProvider::new);
+        pack.addProvider(DataGenerationContext::includeClient, MysteriousModelProvider::new);
     }
 }

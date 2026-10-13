@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mysteriouslands:block/seeping_slab"
+    },
+    "type=double": {
+      "model": "mysteriouslands:block/seeping_planks"
+    },
+    "type=top": {
+      "model": "mysteriouslands:block/seeping_slab_top"
+    }
+  }
+}

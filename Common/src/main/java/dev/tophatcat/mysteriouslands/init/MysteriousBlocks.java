@@ -255,23 +255,23 @@ public class MysteriousBlocks {
             BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
 
     public static final RegistrySupplier<Block> POTTED_BLOOD_SOAKED_SAPLING
-        = BLOCKS.register("blood_soaked_potted_sapling", properties -> new FlowerPotBlock(BLOOD_SOAKED_SAPLING.get(),
+        = BLOCKS.register("potted_blood_soaked_sapling", properties -> new FlowerPotBlock(BLOOD_SOAKED_SAPLING.get(),
             properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
         BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<Block> POTTED_GHOSTLY_SAPLING
-        = BLOCKS.register("ghostly_potted_sapling", properties -> new FlowerPotBlock(GHOSTLY_SAPLING.get(),
+        = BLOCKS.register("potted_ghostly_sapling", properties -> new FlowerPotBlock(GHOSTLY_SAPLING.get(),
             properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
         BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<Block> POTTED_SEEPING_SAPLING
-        = BLOCKS.register("seeping_potted_sapling", properties -> new FlowerPotBlock(SEEPING_SAPLING.get(),
+        = BLOCKS.register("potted_seeping_sapling", properties -> new FlowerPotBlock(SEEPING_SAPLING.get(),
             properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
         BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<Block> POTTED_SORBUS_SAPLING
-        = BLOCKS.register("sorbus_potted_sapling", properties -> new FlowerPotBlock(SORBUS_SAPLING.get(),
+        = BLOCKS.register("potted_sorbus_sapling", properties -> new FlowerPotBlock(SORBUS_SAPLING.get(),
             properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
         BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
     public static final RegistrySupplier<Block> POTTED_WALNUT_SAPLING
-        = BLOCKS.register("walnut_potted_sapling", properties -> new FlowerPotBlock(WALNUT_SAPLING.get(),
+        = BLOCKS.register("potted_walnut_sapling", properties -> new FlowerPotBlock(WALNUT_SAPLING.get(),
             properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
         BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
 

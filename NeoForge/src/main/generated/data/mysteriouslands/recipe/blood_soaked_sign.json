@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_sign",
+  "key": {
+    "S": "minecraft:stick",
+    "W": "mysteriouslands:blood_soaked_planks"
+  },
+  "pattern": [
+    "WWW",
+    "WWW",
+    " S "
+  ],
+  "result": {
+    "count": 3,
+    "id": "mysteriouslands:blood_soaked_sign"
+  }
+}

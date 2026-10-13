@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mysteriouslands:item/seeping_hanging_sign"
+  }
+}

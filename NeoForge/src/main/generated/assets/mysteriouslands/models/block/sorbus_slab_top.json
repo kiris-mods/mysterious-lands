@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "mysteriouslands:block/sorbus_planks",
+    "side": "mysteriouslands:block/sorbus_planks",
+    "top": "mysteriouslands:block/sorbus_planks"
+  }
+}

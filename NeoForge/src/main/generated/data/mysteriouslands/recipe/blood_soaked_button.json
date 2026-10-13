@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    "mysteriouslands:blood_soaked_planks"
+  ],
+  "result": {
+    "id": "mysteriouslands:blood_soaked_button"
+  }
+}

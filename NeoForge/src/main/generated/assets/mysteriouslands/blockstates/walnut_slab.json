@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mysteriouslands:block/walnut_slab"
+    },
+    "type=double": {
+      "model": "mysteriouslands:block/walnut_planks"
+    },
+    "type=top": {
+      "model": "mysteriouslands:block/walnut_slab_top"
+    }
+  }
+}

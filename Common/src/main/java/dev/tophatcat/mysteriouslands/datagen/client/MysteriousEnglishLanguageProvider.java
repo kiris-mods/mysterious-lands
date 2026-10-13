@@ -2,6 +2,7 @@ package dev.tophatcat.mysteriouslands.datagen.client;
 
 import dev.tophatcat.mysteriouslands.init.MysteriousBlocks;
 import dev.tophatcat.mysteriouslands.init.MysteriousCreativeTabs;
+import dev.tophatcat.mysteriouslands.init.MysteriousEntities;
 import dev.tophatcat.mysteriouslands.init.MysteriousItems;
 import dev.upcraft.sparkweave.api.datagen.ContextAwarePackOutput;
 import dev.upcraft.sparkweave.api.datagen.TranslationBuilder;
@@ -106,6 +107,13 @@ public class MysteriousEnglishLanguageProvider extends SparkweaveLanguageProvide
         builder.block(MysteriousBlocks.SORBUS_SAPLING, "Sorbus Sapling");
         builder.block(MysteriousBlocks.WALNUT_SAPLING, "Walnut Sapling");
 
+        // Potted Sapling
+        builder.block(MysteriousBlocks.POTTED_BLOOD_SOAKED_SAPLING, "Potted Blood Soaked Sapling");
+        builder.block(MysteriousBlocks.POTTED_GHOSTLY_SAPLING, "Potted Ghostly Sapling");
+        builder.block(MysteriousBlocks.POTTED_SEEPING_SAPLING, "Potted Seeping Sapling");
+        builder.block(MysteriousBlocks.POTTED_SORBUS_SAPLING, "Potted Sorbus Sapling");
+        builder.block(MysteriousBlocks.POTTED_WALNUT_SAPLING, "Potted Walnut Sapling");
+
         // Signs
         builder.item(MysteriousItems.BLOOD_SOAKED_SIGN, "Blood Soaked Sign");
         builder.item(MysteriousItems.GHOSTLY_SIGN, "Ghostly Sign");
@@ -140,5 +148,19 @@ public class MysteriousEnglishLanguageProvider extends SparkweaveLanguageProvide
         builder.block(MysteriousBlocks.SEEPING_TRAPDOOR, "Seeping Trapdoor");
         builder.block(MysteriousBlocks.SORBUS_TRAPDOOR, "Sorbus Trapdoor");
         builder.block(MysteriousBlocks.WALNUT_TRAPDOOR, "Walnut Trapdoor");
+
+        // Boats
+        builder.entity(MysteriousEntities.BLOOD_SOAKED_BOAT, "Blood Soaked Boat");
+        builder.entity(MysteriousEntities.GHOSTLY_BOAT, "Ghostly Boat");
+        builder.entity(MysteriousEntities.SEEPING_BOAT, "Seeping Boat");
+        builder.entity(MysteriousEntities.SORBUS_BOAT, "Sorbus Boat");
+        builder.entity(MysteriousEntities.WALNUT_BOAT, "Walnut Boat");
+
+        // Boat items
+        builder.item(MysteriousItems.BLOOD_SOAKED_BOAT, "Blood Soaked Boat");
+        builder.item(MysteriousItems.GHOSTLY_BOAT, "Ghostly Boat");
+        builder.item(MysteriousItems.SEEPING_BOAT, "Seeping Boat");
+        builder.item(MysteriousItems.SORBUS_BOAT, "Sorbus Boat");
+        builder.item(MysteriousItems.WALNUT_BOAT, "Walnut Boat");
     }
 }

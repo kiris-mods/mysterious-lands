@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "mysteriouslands:block/seeping_pressure_plate"
+    },
+    "powered=true": {
+      "model": "mysteriouslands:block/seeping_pressure_plate_down"
+    }
+  }
+}

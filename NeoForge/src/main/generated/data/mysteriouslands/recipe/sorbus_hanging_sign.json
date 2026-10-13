@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "hanging_sign",
+  "key": {
+    "W": "mysteriouslands:sorbus_stripped_log",
+    "X": "minecraft:iron_chain"
+  },
+  "pattern": [
+    "X X",
+    "WWW",
+    "WWW"
+  ],
+  "result": {
+    "count": 6,
+    "id": "mysteriouslands:sorbus_hanging_sign"
+  }
+}

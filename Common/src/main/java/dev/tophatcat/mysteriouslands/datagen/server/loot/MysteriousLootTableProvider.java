@@ -13,7 +13,6 @@ public class MysteriousLootTableProvider extends LootTableProvider {
 
     public MysteriousLootTableProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, Collections.emptySet(), List.of(
-            new LootTableProvider.SubProviderEntry(MysteriousBlockLoot::new, LootContextParamSets.BLOCK)
-        ), registries);
+            new LootTableProvider.SubProviderEntry(MysteriousBlockLoot::new, LootContextParamSets.BLOCK)), registries);
     }
 }

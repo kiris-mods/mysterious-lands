@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_fence",
+  "key": {
+    "S": "minecraft:stick",
+    "W": "mysteriouslands:blood_soaked_planks"
+  },
+  "pattern": [
+    "WSW",
+    "WSW"
+  ],
+  "result": {
+    "count": 3,
+    "id": "mysteriouslands:blood_soaked_fence"
+  }
+}

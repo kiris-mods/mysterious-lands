@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "mysteriouslands:block/ghostly_stripped_log"
+      },
+      {
+        "model": "mysteriouslands:block/ghostly_stripped_log",
+        "y": 90
+      },
+      {
+        "model": "mysteriouslands:block/ghostly_stripped_log",
+        "y": 180
+      },
+      {
+        "model": "mysteriouslands:block/ghostly_stripped_log",
+        "y": 270
+      }
+    ]
+  }
+}

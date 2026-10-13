@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    "mysteriouslands:seeping_planks"
+  ],
+  "result": {
+    "id": "mysteriouslands:seeping_button"
+  }
+}

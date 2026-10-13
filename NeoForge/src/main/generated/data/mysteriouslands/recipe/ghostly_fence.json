@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_fence",
+  "key": {
+    "S": "minecraft:stick",
+    "W": "mysteriouslands:ghostly_planks"
+  },
+  "pattern": [
+    "WSW",
+    "WSW"
+  ],
+  "result": {
+    "count": 3,
+    "id": "mysteriouslands:ghostly_fence"
+  }
+}

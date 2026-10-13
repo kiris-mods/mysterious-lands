@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "#mysteriouslands:sorbus_logs"
+  ],
+  "result": {
+    "count": 4,
+    "id": "mysteriouslands:sorbus_planks"
+  }
+}

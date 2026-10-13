@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "mysteriouslands:block/walnut_log"
+      },
+      {
+        "model": "mysteriouslands:block/walnut_log",
+        "y": 90
+      },
+      {
+        "model": "mysteriouslands:block/walnut_log",
+        "y": 180
+      },
+      {
+        "model": "mysteriouslands:block/walnut_log",
+        "y": 270
+      }
+    ]
+  }
+}

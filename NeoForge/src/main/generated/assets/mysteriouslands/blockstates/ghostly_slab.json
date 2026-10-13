@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mysteriouslands:block/ghostly_slab"
+    },
+    "type=double": {
+      "model": "mysteriouslands:block/ghostly_planks"
+    },
+    "type=top": {
+      "model": "mysteriouslands:block/ghostly_slab_top"
+    }
+  }
+}

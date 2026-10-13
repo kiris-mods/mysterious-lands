@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_fence_gate",
+  "key": {
+    "S": "minecraft:stick",
+    "W": "mysteriouslands:blood_soaked_planks"
+  },
+  "pattern": [
+    "SWS",
+    "SWS"
+  ],
+  "result": {
+    "id": "mysteriouslands:blood_soaked_gate"
+  }
+}
