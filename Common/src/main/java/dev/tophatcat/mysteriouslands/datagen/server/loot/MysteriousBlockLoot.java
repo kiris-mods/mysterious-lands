@@ -32,8 +32,8 @@ public class MysteriousBlockLoot extends BlockLootSubProvider {
         dropPottedContents(MysteriousBlocks.POTTED_BLOOD_SOAKED_SAPLING.get());
         dropSelf(MysteriousBlocks.BLOOD_SOAKED_SIGN.get());
         dropSelf(MysteriousBlocks.BLOOD_SOAKED_HANGING_SIGN.get());
-        add(MysteriousBlocks.BLOOD_SOAKED_WALL_SIGN.get(), createSingleItemTable(MysteriousBlocks.BLOOD_SOAKED_SIGN.get()));
-        add(MysteriousBlocks.BLOOD_SOAKED_WALL_HANGING_SIGN.get(), createSingleItemTable(MysteriousBlocks.BLOOD_SOAKED_HANGING_SIGN.get()));
+        add(MysteriousBlocks.BLOOD_SOAKED_WALL_SIGN.get(), this::createSingleItemTable);
+        add(MysteriousBlocks.BLOOD_SOAKED_WALL_HANGING_SIGN.get(), this::createSingleItemTable);
         add(MysteriousBlocks.BLOOD_SOAKED_DOOR.get(), this::createDoorTable);
         add(MysteriousBlocks.BLOOD_SOAKED_LEAVES.get(), block -> createLeavesDrops(
             block, MysteriousBlocks.BLOOD_SOAKED_SAPLING.get(),
@@ -56,8 +56,8 @@ public class MysteriousBlockLoot extends BlockLootSubProvider {
         dropPottedContents(MysteriousBlocks.POTTED_GHOSTLY_SAPLING.get());
         dropSelf(MysteriousBlocks.GHOSTLY_SIGN.get());
         dropSelf(MysteriousBlocks.GHOSTLY_HANGING_SIGN.get());
-        add(MysteriousBlocks.GHOSTLY_WALL_SIGN.get(), createSingleItemTable(MysteriousBlocks.GHOSTLY_SIGN.get()));
-        add(MysteriousBlocks.GHOSTLY_WALL_HANGING_SIGN.get(), createSingleItemTable(MysteriousBlocks.GHOSTLY_HANGING_SIGN.get()));
+        add(MysteriousBlocks.GHOSTLY_WALL_SIGN.get(), this::createSingleItemTable);
+        add(MysteriousBlocks.GHOSTLY_WALL_HANGING_SIGN.get(), this::createSingleItemTable);
         add(MysteriousBlocks.GHOSTLY_DOOR.get(), this::createDoorTable);
         add(MysteriousBlocks.GHOSTLY_LEAVES.get(), block -> createLeavesDrops(
             block, MysteriousBlocks.GHOSTLY_SAPLING.get(),
@@ -80,8 +80,8 @@ public class MysteriousBlockLoot extends BlockLootSubProvider {
         dropPottedContents(MysteriousBlocks.POTTED_SEEPING_SAPLING.get());
         dropSelf(MysteriousBlocks.SEEPING_SIGN.get());
         dropSelf(MysteriousBlocks.SEEPING_HANGING_SIGN.get());
-        add(MysteriousBlocks.SEEPING_WALL_SIGN.get(), createSingleItemTable(MysteriousBlocks.SEEPING_SIGN.get()));
-        add(MysteriousBlocks.SEEPING_WALL_HANGING_SIGN.get(), createSingleItemTable(MysteriousBlocks.SEEPING_HANGING_SIGN.get()));
+        add(MysteriousBlocks.SEEPING_WALL_SIGN.get(), this::createSingleItemTable);
+        add(MysteriousBlocks.SEEPING_WALL_HANGING_SIGN.get(), this::createSingleItemTable);
         add(MysteriousBlocks.SEEPING_DOOR.get(), this::createDoorTable);
         add(MysteriousBlocks.SEEPING_LEAVES.get(), block -> createLeavesDrops(
             block, MysteriousBlocks.SEEPING_SAPLING.get(),
@@ -104,8 +104,8 @@ public class MysteriousBlockLoot extends BlockLootSubProvider {
         dropPottedContents(MysteriousBlocks.POTTED_SORBUS_SAPLING.get());
         dropSelf(MysteriousBlocks.SORBUS_SIGN.get());
         dropSelf(MysteriousBlocks.SORBUS_HANGING_SIGN.get());
-        add(MysteriousBlocks.SORBUS_WALL_SIGN.get(), createSingleItemTable(MysteriousBlocks.SORBUS_SIGN.get()));
-        add(MysteriousBlocks.SORBUS_WALL_HANGING_SIGN.get(), createSingleItemTable(MysteriousBlocks.SORBUS_HANGING_SIGN.get()));
+        add(MysteriousBlocks.SORBUS_WALL_SIGN.get(), this::createSingleItemTable);
+        add(MysteriousBlocks.SORBUS_WALL_HANGING_SIGN.get(), this::createSingleItemTable);
         add(MysteriousBlocks.SORBUS_DOOR.get(), this::createDoorTable);
         add(MysteriousBlocks.SORBUS_LEAVES.get(), block -> createLeavesDrops(
             block, MysteriousBlocks.SORBUS_SAPLING.get(),
@@ -128,8 +128,8 @@ public class MysteriousBlockLoot extends BlockLootSubProvider {
         dropPottedContents(MysteriousBlocks.POTTED_WALNUT_SAPLING.get());
         dropSelf(MysteriousBlocks.WALNUT_SIGN.get());
         dropSelf(MysteriousBlocks.WALNUT_HANGING_SIGN.get());
-        add(MysteriousBlocks.WALNUT_WALL_SIGN.get(), createSingleItemTable(MysteriousBlocks.WALNUT_SIGN.get()));
-        add(MysteriousBlocks.WALNUT_WALL_HANGING_SIGN.get(), createSingleItemTable(MysteriousBlocks.WALNUT_HANGING_SIGN.get()));
+        add(MysteriousBlocks.WALNUT_WALL_SIGN.get(), this::createSingleItemTable);
+        add(MysteriousBlocks.WALNUT_WALL_HANGING_SIGN.get(), this::createSingleItemTable);
         add(MysteriousBlocks.WALNUT_DOOR.get(), this::createDoorTable);
         add(MysteriousBlocks.WALNUT_LEAVES.get(), block -> createLeavesDrops(block, MysteriousBlocks.WALNUT_SAPLING.get(),
             NORMAL_LEAVES_SAPLING_CHANCES));

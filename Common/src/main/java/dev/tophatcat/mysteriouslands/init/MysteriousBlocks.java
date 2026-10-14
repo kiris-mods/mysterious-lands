@@ -3,6 +3,7 @@ package dev.tophatcat.mysteriouslands.init;
 import dev.tophatcat.mysteriouslands.MysteriousLands;
 import dev.upcraft.sparkweave.api.block.SparkweaveCeilingHangingSignBlock;
 import dev.upcraft.sparkweave.api.block.SparkweaveStandingSignBlock;
+import dev.upcraft.sparkweave.api.block.SparkweaveWallHangingSignBlock;
 import dev.upcraft.sparkweave.api.block.SparkweaveWallSignBlock;
 import dev.upcraft.sparkweave.api.registry.RegistryHandler;
 import dev.upcraft.sparkweave.api.registry.RegistrySupplier;
@@ -22,7 +23,6 @@ import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.UntintedParticleLeavesBlock;
-import net.minecraft.world.level.block.WallHangingSignBlock;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -328,19 +328,19 @@ public class MysteriousBlocks {
             BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN));
 
     // Wall hanging signs
-    public static final RegistrySupplier<WallHangingSignBlock> BLOOD_SOAKED_WALL_HANGING_SIGN
-        = BLOCKS.register("blood_soaked_wall_hanging_sign", properties -> new WallHangingSignBlock(WoodType.OAK, properties),
+    public static final RegistrySupplier<SparkweaveWallHangingSignBlock> BLOOD_SOAKED_WALL_HANGING_SIGN
+        = BLOCKS.register("blood_soaked_wall_hanging_sign", properties -> new SparkweaveWallHangingSignBlock(WoodType.OAK, properties),
         () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).setOverridesFrom(BLOOD_SOAKED_HANGING_SIGN));
-    public static final RegistrySupplier<WallHangingSignBlock> GHOSTLY_WALL_HANGING_SIGN
-        = BLOCKS.register("ghostly_wall_hanging_sign", properties -> new WallHangingSignBlock(WoodType.OAK, properties),
+    public static final RegistrySupplier<SparkweaveWallHangingSignBlock> GHOSTLY_WALL_HANGING_SIGN
+        = BLOCKS.register("ghostly_wall_hanging_sign", properties -> new SparkweaveWallHangingSignBlock(WoodType.OAK, properties),
         () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).setOverridesFrom(GHOSTLY_HANGING_SIGN));
-    public static final RegistrySupplier<WallHangingSignBlock> SEEPING_WALL_HANGING_SIGN
-        = BLOCKS.register("seeping_wall_hanging_sign", properties -> new WallHangingSignBlock(WoodType.OAK, properties),
+    public static final RegistrySupplier<SparkweaveWallHangingSignBlock> SEEPING_WALL_HANGING_SIGN
+        = BLOCKS.register("seeping_wall_hanging_sign", properties -> new SparkweaveWallHangingSignBlock(WoodType.OAK, properties),
         () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).setOverridesFrom(SEEPING_HANGING_SIGN));
-    public static final RegistrySupplier<WallHangingSignBlock> SORBUS_WALL_HANGING_SIGN
-        = BLOCKS.register("sorbus_wall_hanging_sign", properties -> new WallHangingSignBlock(WoodType.OAK, properties),
+    public static final RegistrySupplier<SparkweaveWallHangingSignBlock> SORBUS_WALL_HANGING_SIGN
+        = BLOCKS.register("sorbus_wall_hanging_sign", properties -> new SparkweaveWallHangingSignBlock(WoodType.OAK, properties),
         () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).setOverridesFrom(SORBUS_HANGING_SIGN));
-    public static final RegistrySupplier<WallHangingSignBlock> WALNUT_WALL_HANGING_SIGN
-        = BLOCKS.register("walnut_wall_hanging_sign", properties -> new WallHangingSignBlock(WoodType.OAK, properties),
+    public static final RegistrySupplier<SparkweaveWallHangingSignBlock> WALNUT_WALL_HANGING_SIGN
+        = BLOCKS.register("walnut_wall_hanging_sign", properties -> new SparkweaveWallHangingSignBlock(WoodType.OAK, properties),
         () -> BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).setOverridesFrom(WALNUT_HANGING_SIGN));
 }
