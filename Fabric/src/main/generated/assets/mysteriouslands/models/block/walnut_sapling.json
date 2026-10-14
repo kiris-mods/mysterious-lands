@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mysteriouslands:block/walnut_sapling"
+  }
+}

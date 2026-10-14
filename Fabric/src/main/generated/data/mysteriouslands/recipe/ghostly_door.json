@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_door",
+  "key": {
+    "W": "mysteriouslands:ghostly_planks"
+  },
+  "pattern": [
+    "WW",
+    "WW",
+    "WW"
+  ],
+  "result": {
+    "count": 3,
+    "id": "mysteriouslands:ghostly_door"
+  }
+}

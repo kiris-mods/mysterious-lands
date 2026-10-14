@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "mysteriouslands:block/sorbus_log"
+      },
+      {
+        "model": "mysteriouslands:block/sorbus_log",
+        "y": 90
+      },
+      {
+        "model": "mysteriouslands:block/sorbus_log",
+        "y": 180
+      },
+      {
+        "model": "mysteriouslands:block/sorbus_log",
+        "y": 270
+      }
+    ]
+  }
+}

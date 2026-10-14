@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    "mysteriouslands:sorbus_planks"
+  ],
+  "result": {
+    "id": "mysteriouslands:sorbus_button"
+  }
+}

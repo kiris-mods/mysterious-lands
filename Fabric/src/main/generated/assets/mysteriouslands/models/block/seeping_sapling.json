@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mysteriouslands:block/seeping_sapling"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_pressure_plate",
+  "key": {
+    "W": "mysteriouslands:walnut_planks"
+  },
+  "pattern": [
+    "WW"
+  ],
+  "result": {
+    "id": "mysteriouslands:walnut_pressure_plate"
+  }
+}

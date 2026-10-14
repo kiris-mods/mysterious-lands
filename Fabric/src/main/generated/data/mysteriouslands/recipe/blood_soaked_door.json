@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_door",
+  "key": {
+    "W": "mysteriouslands:blood_soaked_planks"
+  },
+  "pattern": [
+    "WW",
+    "WW",
+    "WW"
+  ],
+  "result": {
+    "count": 3,
+    "id": "mysteriouslands:blood_soaked_door"
+  }
+}

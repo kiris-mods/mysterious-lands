@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "mysteriouslands:block/walnut_door_bottom",
+    "top": "mysteriouslands:block/walnut_door_top"
+  }
+}
