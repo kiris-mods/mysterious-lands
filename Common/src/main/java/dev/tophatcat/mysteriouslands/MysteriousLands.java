@@ -5,6 +5,7 @@ import dev.tophatcat.mysteriouslands.init.MysteriousBlocks;
 import dev.tophatcat.mysteriouslands.init.MysteriousCreativeTabs;
 import dev.tophatcat.mysteriouslands.init.MysteriousEntities;
 import dev.tophatcat.mysteriouslands.init.MysteriousItems;
+import dev.tophatcat.mysteriouslands.init.MysteriousWoodType;
 import dev.upcraft.sparkweave.api.entrypoint.MainEntryPoint;
 import dev.upcraft.sparkweave.api.platform.ModContainer;
 import dev.upcraft.sparkweave.api.platform.services.RegistryService;
@@ -19,6 +20,7 @@ public class MysteriousLands implements MainEntryPoint {
     public void onInitialize(ModContainer mod) {
         var registryService = RegistryService.get();
 
+        MysteriousWoodType.init();
         MysteriousBlocks.BLOCKS.accept(registryService);
         MysteriousItems.ITEMS.accept(registryService);
         MysteriousEntities.ENTITIES.accept(registryService);
