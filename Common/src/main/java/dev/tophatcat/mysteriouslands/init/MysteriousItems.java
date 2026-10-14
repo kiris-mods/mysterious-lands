@@ -196,31 +196,31 @@ public class MysteriousItems {
 
     // Sign items
     public static final RegistrySupplier<SignItem> BLOOD_SOAKED_SIGN = ITEMS.registerForBlock(MysteriousBlocks.BLOOD_SOAKED_SIGN,
-        (signBlock, properties) -> new SignItem(signBlock, MysteriousBlocks.BLOOD_SOAKED_SIGN.get(), properties), new Item.Properties().stacksTo(16));
+        (signBlock, properties) -> new SignItem(signBlock, MysteriousBlocks.BLOOD_SOAKED_WALL_SIGN.get(), properties), new Item.Properties().stacksTo(16));
 
     public static final RegistrySupplier<SignItem> GHOSTLY_SIGN = ITEMS.registerForBlock(MysteriousBlocks.GHOSTLY_SIGN,
-        (signBlock, properties) -> new SignItem(signBlock, MysteriousBlocks.GHOSTLY_SIGN.get(), properties), new Item.Properties().stacksTo(16));
+        (signBlock, properties) -> new SignItem(signBlock, MysteriousBlocks.GHOSTLY_WALL_SIGN.get(), properties), new Item.Properties().stacksTo(16));
 
     public static final RegistrySupplier<SignItem> SEEPING_SIGN = ITEMS.registerForBlock(MysteriousBlocks.SEEPING_SIGN,
-        (signBlock, properties) -> new SignItem(signBlock, MysteriousBlocks.SEEPING_SIGN.get(), properties), new Item.Properties().stacksTo(16));
+        (signBlock, properties) -> new SignItem(signBlock, MysteriousBlocks.SEEPING_WALL_SIGN.get(), properties), new Item.Properties().stacksTo(16));
 
     public static final RegistrySupplier<SignItem> SORBUS_SIGN = ITEMS.registerForBlock(MysteriousBlocks.SORBUS_SIGN,
-        (signBlock, properties) -> new SignItem(signBlock, MysteriousBlocks.SORBUS_SIGN.get(), properties), new Item.Properties().stacksTo(16));
+        (signBlock, properties) -> new SignItem(signBlock, MysteriousBlocks.SORBUS_WALL_SIGN.get(), properties), new Item.Properties().stacksTo(16));
 
     public static final RegistrySupplier<SignItem> WALNUT_SIGN = ITEMS.registerForBlock(MysteriousBlocks.WALNUT_SIGN,
         (signBlock, properties) -> new SignItem(signBlock, MysteriousBlocks.WALNUT_SIGN.get(), properties), new Item.Properties().stacksTo(16));
 
     // Hanging sign items
     public static final RegistrySupplier<SignItem> BLOOD_SOAKED_HANGING_SIGN = ITEMS.registerForBlock(MysteriousBlocks.BLOOD_SOAKED_HANGING_SIGN,
-        (signBlock, properties) -> new HangingSignItem(signBlock, MysteriousBlocks.BLOOD_SOAKED_HANGING_SIGN.get(), properties), new Item.Properties().stacksTo(16));
+        (signBlock, properties) -> new HangingSignItem(signBlock, MysteriousBlocks.BLOOD_SOAKED_WALL_HANGING_SIGN.get(), properties), new Item.Properties().stacksTo(16));
     public static final RegistrySupplier<SignItem> GHOSTLY_HANGING_SIGN = ITEMS.registerForBlock(MysteriousBlocks.GHOSTLY_HANGING_SIGN,
-        (signBlock, properties) -> new HangingSignItem(signBlock, MysteriousBlocks.GHOSTLY_HANGING_SIGN.get(), properties), new Item.Properties().stacksTo(16));
+        (signBlock, properties) -> new HangingSignItem(signBlock, MysteriousBlocks.GHOSTLY_WALL_HANGING_SIGN.get(), properties), new Item.Properties().stacksTo(16));
     public static final RegistrySupplier<SignItem> SEEPING_HANGING_SIGN = ITEMS.registerForBlock(MysteriousBlocks.SEEPING_HANGING_SIGN,
-        (signBlock, properties) -> new HangingSignItem(signBlock, MysteriousBlocks.SEEPING_HANGING_SIGN.get(), properties), new Item.Properties().stacksTo(16));
+        (signBlock, properties) -> new HangingSignItem(signBlock, MysteriousBlocks.SEEPING_WALL_HANGING_SIGN.get(), properties), new Item.Properties().stacksTo(16));
     public static final RegistrySupplier<SignItem> SORBUS_HANGING_SIGN = ITEMS.registerForBlock(MysteriousBlocks.SORBUS_HANGING_SIGN,
-        (signBlock, properties) -> new HangingSignItem(signBlock, MysteriousBlocks.SORBUS_HANGING_SIGN.get(), properties), new Item.Properties().stacksTo(16));
+        (signBlock, properties) -> new HangingSignItem(signBlock, MysteriousBlocks.SORBUS_WALL_HANGING_SIGN.get(), properties), new Item.Properties().stacksTo(16));
     public static final RegistrySupplier<SignItem> WALNUT_HANGING_SIGN = ITEMS.registerForBlock(MysteriousBlocks.WALNUT_HANGING_SIGN,
-        (signBlock, properties) -> new HangingSignItem(signBlock, MysteriousBlocks.WALNUT_HANGING_SIGN.get(), properties), new Item.Properties().stacksTo(16));
+        (signBlock, properties) -> new HangingSignItem(signBlock, MysteriousBlocks.WALNUT_WALL_HANGING_SIGN.get(), properties), new Item.Properties().stacksTo(16));
 
     public static final RegistrySupplier<Item> BLOOD_SOAKED_BOAT = ITEMS.register("blood_soaked_boat", properties -> new BoatItem(MysteriousEntities.BLOOD_SOAKED_BOAT.get(), properties), new Item.Properties().stacksTo(1));
     public static final RegistrySupplier<Item> GHOSTLY_BOAT = ITEMS.register("ghostly_boat", properties -> new BoatItem(MysteriousEntities.GHOSTLY_BOAT.get(), properties), new Item.Properties().stacksTo(1));

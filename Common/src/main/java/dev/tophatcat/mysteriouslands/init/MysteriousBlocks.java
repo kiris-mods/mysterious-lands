@@ -254,6 +254,7 @@ public class MysteriousBlocks {
         = BLOCKS.register("walnut_sapling", properties -> new SaplingBlock(TreeGrower.BIRCH, properties),
             BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
 
+    // Potted saplings
     public static final RegistrySupplier<Block> POTTED_BLOOD_SOAKED_SAPLING
         = BLOCKS.register("potted_blood_soaked_sapling", properties -> new FlowerPotBlock(BLOOD_SOAKED_SAPLING.get(),
             properties.noOcclusion().instabreak().pushReaction(PushReaction.DESTROY)),
